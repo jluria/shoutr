@@ -1,0 +1,9 @@
+hello!
+
+<div>This is the page for <%= @user.username %> </div>
+
+<h4>Following: <%= render @user %></h4>
+
+<% @shouts.each do |shout| %>
+  <%= shout.body %> by <%= link_to shout.user.username, shout.user %>
+<% end %>

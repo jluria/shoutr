@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   
   root "homes#show"
 
+  resources :shouts, only: [:create]
+
   resource :session, only: [:new, :create, :destroy]
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :show]
 end

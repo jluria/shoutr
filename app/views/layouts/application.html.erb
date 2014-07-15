@@ -8,6 +8,12 @@
 </head>
 <body>
 
+  <% if signed_in? %>
+    Welcome <%= current_user.username %> <%= link_to "Sign out", session_path, method: :destroy %>
+  <% end %>
+
+<hr/>
+
 <%= yield %>
 
 </body>
